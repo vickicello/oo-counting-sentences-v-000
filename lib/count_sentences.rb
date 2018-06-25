@@ -27,6 +27,14 @@ class String
   end
 
   def count_sentences
-    self.split(/./, /?/, /!/).count
-  end
+    split_self = self.split(/\.|\?|\!/)
+    value = 0
+    split_self.each do |array|
+      if !(array == "")
+        value += 1
+      end
+    end
+    value
+   end
+
 end
